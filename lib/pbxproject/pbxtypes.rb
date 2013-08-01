@@ -182,7 +182,7 @@ module PBXProject
     end
     
     class PBXFileReference < ISAType
-      has_fields :isa, :fileEncoding, :explicitFileType, :lastKnownFileType, :includeInIndex, :name, :path, :sourceTree
+      has_fields :isa, :fileEncoding, :explicitFileType, :lastKnownFileType, :lineEnding, :includeInIndex, :name, :path, :plistStructureDefinitionIdentifier, :sourceTree, :xcLanguageSpecificationIdentifier
       has_format :oneline
     end
 
@@ -258,7 +258,7 @@ module PBXProject
     end
 
     class XCBuildConfiguration < ISAType
-      has_fields :isa, :buildSettings, :name
+      has_fields :isa, :baseConfigurationReference, :buildSettings, :name
       has_format :multiline
     end
 
